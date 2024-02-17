@@ -1,9 +1,9 @@
 # A Shark's Guide to Gourmet Dining
 
 ## Overview
-In this project, we're diving into shark attack data with a unique goal: to create a guide for sharks, helping them find the best places and times to have the tastiest meals. By studying when and where shark attacks happen, as well as what the victims were doing, we'll uncover patterns to help sharks make better dining choices. Our aim is to provide insights that will help sharks find their favorite meals while also promoting ocean safety for humans.
+In this project, I will be diving into world-while shark attack data with the goal: to create a guide for sharks, helping them find the best places and times to have the tastiest meals. By studying when and where shark attacks happen, as well as what the victims were doing, we'll uncover patterns to help sharks make better dining choices. Our aim is to provide insights that will help sharks find their favorite meals while also promoting ocean safety for humans.
 
-![image info](images/Gourmet_Guide.jpg)
+![image info](Images/Gourmet_Guide.jpg)
 
 ## Requirements/Libraries
 Code was written in Python using Jupyter Notebook and Visual Studio Code. 
@@ -49,7 +49,7 @@ Libraries used:
 
 
 # Data Cleaning
-![image info](images/First_version_Df.png)
+![image info](Images/First_version_Df.png)
 #### First Attempt
 - Delete duplicated 19.418 duplicated rows
 - Exanime Nulls (clean all nulls values) -> first subset ended with a df.shape (6305, 16)
@@ -76,10 +76,10 @@ I will present an overview of the main cleaning methods used
 - Create a variable with the Activities that are repeated more than 10 times
 - Convert activity to lowercase and split by ' ' to iterate over the different words
 - Append the matching word
-![image info](images/Activity.png)
+![image info](Images/Activity.png)
 - Create a new column with the filtered activities
 - I do a mapping that groups similar activities into the most common ones
-![image info](images/Most_common_activities.png)
+![image info](Images/Most_common_activities.png)
 
 ### Age variable
 This column has diverse data formats
@@ -92,20 +92,20 @@ This column has diverse data formats
 I take different approaches to each of them.
 1. I do a mapping for those values that are using a string to show a Age. (Teen, Adult, etc)
 2. I use Regex, for values that comprenhend between a range of Age, 40 - 50, or that have no digits.
-![image info](images/Regex.png)
+![image info](Images/Regex.png)
 
 ### Time variable
 This variable pecualiarity is that there are hours format like 14h30
 1. To clen it in the most efficient way I create a function that takes the 5 characters after the first number is found.
-![image info](images/clea_time_1.png)
+![image info](Images/clea_time_1.png)
 2. In order to have more flexibility I change the format to integers by droping the "h" and only keeping the first two digits
-![image info](images/clean_time.png)
+![image info](Images/clean_time.png)
 
 
 ### Subset Result
 
 My cleaned attacks data frame has a shape (1689, 8)
-![image info](images/Final_df.png)
+![image info](Images/Final_df.png)
 
 
 
@@ -114,7 +114,7 @@ My cleaned attacks data frame has a shape (1689, 8)
 ### `Hypothesy 1`: Surfers are the most vulnerable to attacks
 Do sharks find it easier to prey on surfers due to their active movements and proximity to the ocean's surface, making them more accessible targets?
 
-![image info](images/hypo1.png)
+![image info](Images/hypo1.png)
 
 - By grouping the number of attacks during the last 8 years of the df, we see how surfers are the ones most attacked with a huge different (more than double)
 
@@ -123,12 +123,12 @@ Do sharks find it easier to prey on surfers due to their active movements and pr
 
 While reaching people swimming may require sharks to venture closer to the coast, once within range, do they provide a more substantial meal compared to surfers, who may only offer an apetizer?
 
-![image info](images/hypo2_a.png)
+![image info](Images/hypo2_a.png)
 
 - To have a better view I have divided the Activities in two types: Sports or Recreative activities.
 - We confirm that the most attacked people are the ones practicing a sport
 
-![image info](images/hypo2_b.png)
+![image info](Images/hypo2_b.png)
 
 
 - However the Fatality rate is higher for recreative activity. Giving us a point to justify our hypothesis. 
@@ -138,9 +138,9 @@ While reaching people swimming may require sharks to venture closer to the coast
 
 With more people engaging in sports activities during the morning, sharks may have a higher chance of encountering potential prey, leading to increased feeding opportunities.
 
-![image info](images/hypo3_a.png)
+![image info](Images/hypo3_a.png)
 
-![image info](images/hypo3_b.png)
+![image info](Images/hypo3_b.png)
 
 - With this two graphs we can see how the are more attacks produced during the day, but actually the best time for a Shark to eat is in the Afternoon.
 
@@ -148,19 +148,19 @@ With more people engaging in sports activities during the morning, sharks may ha
 ### `Hypothesy 4`: Advanced age increases vulnerability
 Are older individuals more susceptible to shark attacks due to potential mobility limitations and decreased ability to evade or defend against predators?
 
-![image info](images/hypo4.png)
+![image info](Images/hypo4.png)
 
 - This graph presents a lot of information by displaying the different age distribution, grouping the data by each activity and confirming the Age rate with most Fatality cases.
 - Surfing is the activity with more attacks
 - Swmming has the wider age distribution with the oldest people attacked.
-- However the sports a the highest Age avg are diving and kayaking. 
+- However the sports with the highest Age avg are diving and kayaking. 
  - We can see a correlation of more death in this two sports as age is higher
 
 # Final Conclusions
 
 The final conclusions to this Shark's Gourmet dining Guide are:
 
-1. Eventough eating someone that is swimming instead of surfing is a bigger banquete the probabilities of getting to it are lower
+1. Eventhough eating someone that is swimming instead of surfing is a bigger banquete the probabilities of getting to it are lower
 
 2. The shark will have to decide weather eat three arms and one leg or go for the big price
 
