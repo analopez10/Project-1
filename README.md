@@ -65,6 +65,8 @@ This second Step is one of the most important one as I'm preparing the final sub
    - Age
    - Time
    - Fatal (Y/N)
+
+
 I will present an overview of the main cleaning methods used
 
 
@@ -128,7 +130,9 @@ While reaching people swimming may require sharks to venture closer to the coast
 
 ![image info](images/hypo2_b.png)
 
+
 - However the Fatality rate is higher for recreative activity. Giving us a point to justify our hypothesis. 
+
 
 ### `Hypothesy 3`: Breakfast time may be prime dining hours
 
@@ -138,7 +142,7 @@ With more people engaging in sports activities during the morning, sharks may ha
 
 ![image info](images/hypo3_b.png)
 
-- With this two graphs we can see how the more attacks are produced during the day, but actually the best time for a Shark to eat is in the Afternoon.
+- With this two graphs we can see how the are more attacks produced during the day, but actually the best time for a Shark to eat is in the Afternoon.
 
 
 ### `Hypothesy 4`: Advanced age increases vulnerability
